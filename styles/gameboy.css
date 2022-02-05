@@ -1,0 +1,48 @@
+.gameboy {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.top, .screen, .mid-box, .select-start, .bottom-box {
+    flex-grow: 1;
+    height: 100px;
+}
+
+.screen {
+    background-color: lightgreen;
+}
+
+.mid-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-box {
+    display: flex;
+}
+
+.a-b {
+    flex-grow: 1;
+}
+
+.d-pad {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.d-column {
+    display: flex;
+    flex-grow: 1;
+}
+
+.arrow, .mid-d {
+    background-color: black;
+}
+
+.arrow, .mid-d, .no-d {
+    flex-grow: 1;
+    flex-wrap: wrap;
+    flex-basis: 30%;
+}
