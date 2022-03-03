@@ -9,8 +9,8 @@ html, body {
                          "... screen screen screen ..."
                          "... logo   logo   ...    ..."
                          "... d-pad  ...    a-b    ..."
-                         "... ...    s-s    ...    spk"
-                         "... ...    hp     ...    spk";
+                         "... ...    s-s    spk    spk"
+                         "... ...    hp     spk    spk";
     grid-template-columns: 5% 1fr 1fr 1fr 5%;
     grid-template-rows: 5% 45% auto auto auto 5%;
     border: solid black 1px;
@@ -30,8 +30,17 @@ html, body {
     border-radius: 15px 15px 50px 15px;
 }
 
+#game-container {
+    position: relative;
+    width: 352px;
+    height: 198px;
+}
+
 #logo {
     grid-area: logo;
+    color: rgb(3, 3, 165);
+    font-size: 1.5em;
+    margin-top: 2px;
 }
 
 #d-pad {
@@ -42,6 +51,24 @@ html, body {
 
 #a-b {
     grid-area: a-b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#a {
+    align-self: end;
+}
+
+#a, #b {
+    background-color: #840145;
+    display: block;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 50%;
+    height: 4em;
+    width: 4em;
+    color: antiquewhite;
 }
 
 #select-start {
@@ -53,9 +80,22 @@ html, body {
 }
 
 #speaker {
+    display: flex;
+    flex-direction: column;
     grid-area: spk;
+    height: 100%;
+    width: 100%;
+    transform: rotate(55deg);
+    align-items: center;
 }
 
+.speaker-line {
+    background-color: black;
+    height: 15%;
+    width: 45%;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
 
 .arrow {
     background-color: black;
