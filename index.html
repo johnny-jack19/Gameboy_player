@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <script src="/javascript/index.js"></script>
+    <title>Gameboy Player | Home</title>
 </head>
 <body>
-    
-</body>
-</html>
+    <h1>Gameboy Player</h1>
+    <div>
+        <img class="hero" src="/images/hero.gif">
+    </div>
+    <div class="card-container">
+        <div class="game-card" id="game-1">
+            <div class="overlay"></div>
+            <h2 class="game-title">Pokemon</h2>
+            <div class="game-info">
+                <p class="game-text-1 hidden">Hello</p>
+                <p class="game-text-2">World</p>
+                <p class="game-text-3 hidden">And everyone else</p>
+            </div>
+            <div class="button-container">
+                <button class="block-button" onclick="gameInfoToggle('game-1')">?</button>
+                <a href="/pages/gameboy.html"><img class="warp-pipe" src="/images/pipe.png"></a>
+            </div>
+        </div>
+        <div class="game-card" id="game-2">
+            <div class="overlay"></div>
+            <h2 class="game-title">Mario</h2>
+            <div class="game-info">
+                <p class="game-text-1">Hello</p>
+                <p class="game-text-2 hidden">World</p>
+                <p class="game-text-3 hidden">And everyone else</p>
+            </div>
+            <button class="block-button" onclick="gameInfoToggle('game-2')"">?</button>
+        </div>
+        <div class="game-card" id="game-3">
+            <div class="overlay"></div>
+            <h2 class="game-title">Zelda</h2>
+            <div class="game-info">
+                <p class="game-text-1">Hello</p>
+                <p class="game-text-2 hidden">World</p>
+                <p class="game-text-3 hidden">And everyone else</p>
+            </div>
+            <button class="block-button" onclick="gameInfoToggle('game-3')">?</button>
+        </div>
+        <div class="game-card" id="game-4">
+            <div class="overlay"></div>
+            <h2 class="game-title">Kirby</h2>
+            <div class="game-info">
+                <p class="game-text-1">Hello</p>
+                <p class="game-text-2 hidden">World</p>
+                <p class="game-text-3 hidden">And everyone else</p>
+            </div>
+            <button class="block-button" onclick="gameInfoToggle('game-4')">?</button>
+        </div>
+        <div class="game-card" id="game-5">
+            <div class="overlay"></div>
+            <h2 class="game-title">Metroid</h2>
+            <div class="game-info">
+                <p class="game-text-1">Hello</p>
+                <p class="game-text-2 hidden">World</p>
+                <p class="game-text-3 hidden">And everyone else</p>
+            </div>
+            <button class="block-button" onclick="gameInfoToggle('game-5')">?</button>
+        </div>
+    </div>
+    </body>
+    </html>
