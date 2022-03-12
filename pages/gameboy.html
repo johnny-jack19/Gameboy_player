@@ -7,15 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gameboy</title>
     <link rel="stylesheet" href="/styles/gameboy.css">
-    <script src="/javascript/pokemon.js"></script>
 </head>
 
 <body>
     <div class="gameboy">
         <div id="top"></div>
         <div id="screen">
-            <div id="game-cantainer">
-                <canvas id="game-screen" width="352" height="198"></canvas>
+            <div class="game-container">
+                <canvas class="game-screen" width="128" height="128"></canvas>
             </div>
         </div>
         <div id="logo">
@@ -32,14 +31,22 @@
             <button class="arrow" id="down-arrow"></button>
             <div class="no-d"></div>
         </div>
-            <div id="a-b">
-                <button id="a">A</button>
-                <button id="b">B</button>
-            </div>
+        <div id="a-b">
+            <button id="a">A</button>
+            <button id="b">B</button>
+        </div>
         <div id="select-start">
             <button id="select">SELECT</button>
             <button id="start">START</button>
         </div>
+        <script src="/javascript/pokemon.js"></script>
+        <script src="/javascript/DirectionInput.js"></script>
+        <script src="/javascript/Overworld.js"></script>
+        <script src="/javascript/GameObject.js"></script>
+        <script src="/javascript/Person.js"></script>
+        <script src="/javascript/Sprite.js"></script>
+        <script src="/javascript/OverworldMap.js"></script>
+        <script src="/javascript/init.js"></script>
 </body>
 
 </html>

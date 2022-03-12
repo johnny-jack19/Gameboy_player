@@ -7,6 +7,13 @@ body {
     flex-direction: column;
 }
 
+h1 {
+    color: white;
+    align-self: center;
+    text-shadow: 2px 2px red;
+    font-size: 4em;
+}
+
 .card-container {
     display: flex;
     flex-direction: column;
@@ -190,15 +197,17 @@ h2, p {
         display: none;
     }
     .card-container {
-        width: 600vw;
+        width: 700vw;
         flex-wrap: nowrap;
         transform: rotate(90);
         margin: 0;
         padding: 0;
+        justify-content: space-around;
     }
     .game-card {
-        width: 100vw;
-        height: 100vh;
-        margin: 0 50px;
+        width: 500px;
+        height: 500px;
+        flex-grow: 0;
+        flex-basis: 500px;
     }
 }

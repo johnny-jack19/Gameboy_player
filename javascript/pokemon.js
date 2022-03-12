@@ -168,11 +168,11 @@ let sabrinaExeggutor = new Pokemon("Exeggutor", "Grass", "Psychic", 394, 195, 17
 let sabrina =  new Trainer("Sabrina", [sabrinaAlakazam, sabrinaHypno, sabrinaMrMime, sabrinaJynx, sabrinaSlowbro, sabrinaExeggutor]);
 
 //Blaine
-let blaineArcanine = new Pokemon("Arcanine", "Fire", "None", 290, 225, 165, 299, 165, 289, ["flameThrower", "flameBlast", "fireFang", "dragonPulse"]);
-let blaineRapidash = new Pokemon("Rapidash", "Fire", "None", 240, 299, 145, 165, 165, 309, ["flameThrower", "flameBlast", "brickBreak", "poisonJab"]);
-let blaineNinetales = new Pokemon("Ninetales", "Fire", "None", 256, 157, 155, 261, 205, 299, ["flameThrower", "flameBlast", "fireFang", "ironTail"]);
-let blaineFlareon = new Pokemon("Flareon", "Fire", "None", 240, 359, 125, 289, 225, 135, ["flameThrower", "flameBlast", "fireFang", "strength"]);
-let blaineMagmar = new Pokemon("Magmar", "Fire", "None", 240, 289, 119, 299, 175, 191, ["flameThrower", "flameBlast", "firePunch", "thunderPunch"]);
+let blaineArcanine = new Pokemon("Arcanine", "Fire", "None", 290, 225, 165, 299, 165, 289, ["flameThrower", "fireBlast", "fireFang", "dragonPulse"]);
+let blaineRapidash = new Pokemon("Rapidash", "Fire", "None", 240, 299, 145, 165, 165, 309, ["flameThrower", "fireBlast", "brickBreak", "poisonJab"]);
+let blaineNinetales = new Pokemon("Ninetales", "Fire", "None", 256, 157, 155, 261, 205, 299, ["flameThrower", "fireBlast", "fireFang", "ironTail"]);
+let blaineFlareon = new Pokemon("Flareon", "Fire", "None", 240, 359, 125, 289, 225, 135, ["flameThrower", "fireBlast", "fireFang", "strength"]);
+let blaineMagmar = new Pokemon("Magmar", "Fire", "None", 240, 289, 119, 299, 175, 191, ["flameThrower", "fireBlast", "firePunch", "thunderPunch"]);
 let blaineCharizard = new Pokemon("Charizard", "Fire", "Flying", 266, 173, 161, 317, 175, 299, ["flameThrower", "airSlash", "fireBlast", "dragonPulse"]);
 let blaine =  new Trainer("Blaine", [blaineArcanine, blaineRapidash, blaineNinetales, blaineFlareon, blaineMagmar, blaineCharizard]);
 
