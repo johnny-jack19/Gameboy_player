@@ -1,7 +1,6 @@
 class DirectionInput {
     constructor() {
         this.heldDirection = [];
-
         this.map = {
             "ArrowUp": "up",
             "up-arrow": "up",

@@ -1,5 +1,7 @@
 class Sprite {
     constructor(config) {
+        //Reference the game object
+        this.gameObject = config.gameObject;
 
         //Set image
         this.image = new Image();
@@ -10,23 +12,19 @@ class Sprite {
 
         //Configure Animation
         this.animations = {
-            "idle-down": [[26, 34]],
-            "walk-down": [[9, 34], [26, 34], [43, 34], [26, 34]],
-            "idle-right": [[145, 34]],
-            "walk-right": [[162, 34], [145, 34]],
-            "idle-up": [[77, 34]],
-            "walk-up": [[60, 34], [77, 34], [94, 34], [77, 34]],
-            "idle-left": [[111, 34]],
-            "walk-left": [[128, 34], [111, 34]]
+            "idle-down": [26],
+            "walk-down": [9, 26, 43, 26],
+            "idle-right": [145],
+            "walk-right": [162, 145],
+            "idle-up": [77],
+            "walk-up": [60, 77, 94, 77],
+            "idle-left": [111],
+            "walk-left": [128, 111]
         }
-        this.currentAnimation = config.currentAnimation || "walk-up";
+        this.currentAnimation = config.currentAnimation || "idle-down";
         this.currentAnimationFrame = 0;
-
         this.animationFrameLimit = config.animationFrameLimit || 4;
         this.animationFrameProgress = this.animationFrameLimit;
-
-        //Reference the game object
-        this.gameObject = config.gameObject;
     }
 
     get frame() {
@@ -51,7 +49,6 @@ class Sprite {
         //Reset the counter
         this.animationFrameProgress = this.animationFrameLimit;
         this.currentAnimationFrame += 1;
-
         if (this.frame === undefined) {
             this.currentAnimationFrame = 0;
         }
@@ -59,22 +56,23 @@ class Sprite {
 
     draw(context) {
         this.updateAnimationProgress();
-        let sx = this.gameObject.imageInfo.sx || 26;
-        let sy = this.gameObject.imageInfo.sy || 34;
+        const sx = this.frame || 26;
+        const sy = this.gameObject.imageInfo.sy || 34;
+        const x = this.gameObject.x;
+        const y = this.gameObject.y;
+        this.isLoaded && context.drawImage(this.image, sx, sy, 16, 16, x, y, 16, 16);
+    }
+
+    //For testing
+    findPosition() {
         if (this.gameObject.isPlayerControlled) {
-            sx = this.frame[0];
-            sy = this.frame[1];
-            document.addEventListener("mousedown", e => {
-                if (e.path[0].id == "select") {
-                    console.log(this.gameObject.x, this.gameObject.y);
+            document.addEventListener("keydown", e => {
+                //console.log(e.code);
+                if (e.code == "KeyF") {
+                    console.log(this.gameObject.x, this.gameObject.y, this.currentAnimation);
+                    return;
                 }
             });
-          
         }
-        const x = this.gameObject.x || 56;
-        const y = this.gameObject.y || 56;
-        
-        this.isLoaded && context.drawImage(this.image, sx, sy, 16, 16, x, y, 16, 16);
-        
     }
 }

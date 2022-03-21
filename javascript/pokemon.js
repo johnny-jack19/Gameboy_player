@@ -184,6 +184,3 @@ let giovanniRhydon = new Pokemon("Rhydon", "Ground", "Rock", 320, 359, 339, 95, 
 let giovanniNidoqueen = new Pokemon("Nidoqueen", "Poison", "Ground", 290, 263, 179, 155, 269, 157, ["earthquake", "poisonJab", "ironTail", "dragonClaw"]);
 let giovanniNidoking = new Pokemon("Nidoking", "Poison", "Ground", 272, 283, 159, 175, 155, 269, ["earthquake", "poisonJab", "ironHead", "dragonClaw"]);
 let giovanni =  new Trainer("Giovanni", [giovanniDugtrio, giovanniSandslash, giovanniMarowak, giovanniRhydon, giovanniNidoqueen, giovanniNidoking]);
-
-//console.log(mistyStarmie.move1);
-//console.log(moves.surf);

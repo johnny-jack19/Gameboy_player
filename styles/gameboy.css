@@ -1,5 +1,11 @@
 html, body {
     height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .gameboy {
@@ -48,6 +54,38 @@ html, body {
     height: 100%;
     border-radius: 5px;
     image-rendering: pixelated;
+}
+
+.TextMessage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 72px;
+    padding: 4px;
+    background-color: antiquewhite;
+    border-top: blue;
+    color: black;
+}
+
+.TextMessage_p {
+    margin: 0;
+    font-size: 24px;
+}
+
+.TextMessage_button {
+    margin: 0;
+    font-size: 16px;
+    padding: 0;
+    -webkit-appearance: none;
+    background: none;
+    border: 0;
+    font-family: inherit;
+    cursor: pointer;
+
+    position: absolute;
+    right: 2px;
+    bottom: 0;
 }
 
 #logo {
