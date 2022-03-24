@@ -38,7 +38,7 @@ class Person extends GameObject {
 
             //Ready to walk!
             state.map.moveWall(this.x, this.y, this.direction);
-            this.movingProgressRemaining = 8;
+            this.movingProgressRemaining = 16;
             this.updateSprite();
         }
     

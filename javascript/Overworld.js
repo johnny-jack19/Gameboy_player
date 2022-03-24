@@ -16,6 +16,9 @@ class Overworld {
       //Clear off canvas
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
+      //Set up camera
+      const cameraFocus = this.map.gameObjects.player;
+
       //Update objects
       Object.values(this.map.gameObjects).forEach(object => {
         object.update({
@@ -24,14 +27,14 @@ class Overworld {
         })
       })
 
-      //Draw lower layer
-      this.map.drawMap(this.context);
+      //Draw Map
+      this.map.drawMap(this.context, cameraFocus);
 
       //Draw game objects
       Object.values(this.map.gameObjects).sort((a, b) => {
         return a.y - b.y;
       }).forEach(object => {
-        object.sprite.draw(this.context);
+        object.sprite.draw(this.context, cameraFocus);
       })
 
       //Step through
@@ -42,47 +45,54 @@ class Overworld {
     step();
   }
 
-  init() {
-    this.map = new OverworldMap(window.OverworldMaps.Brock);
+  bindActionInput() {
+    new KeyPressLister(["Enter", "a"], () => {
+      this.map.checkForActionCutscene();
+    })
+  }
+
+  bindPlayerPositionCheck() {
+    document.addEventListener("PersonWalkingComplete", e => {
+      if (e.detail.whoId === "player") {
+        this.map.checkForFootstepCutscene()
+      }
+    })
+  }
+
+  startMap(mapConfig) {
+    this.map = new OverworldMap(mapConfig);
+    this.map.overworld = this;
     this.map.mountObjects();
+  }
+
+  init() {
+    this.startMap(window.OverworldMaps.Brock);
+    this.bindActionInput();
+    this.bindPlayerPositionCheck();
     this.directionInput = new DirectionInput();
     this.directionInput.init();
     this.startGameLoop();
+    this.cameraFocus =
     this.map.startCutscene([
       {who: "tech", type: "walk", direction: "down"},
       {who: "tech", type: "walk", direction: "down"},
       {who: "tech", type: "walk", direction: "down"},
       {who: "tech", type: "walk", direction: "down"},
-      {who: "tech", type: "walk", direction: "down"},
-      {who: "tech", type: "walk", direction: "down"},
-      {who: "tech", type: "walk", direction: "down"},
-      {who: "tech", type: "walk", direction: "down"},
       {who: "tech", type: "walk", direction: "left"},
       {who: "tech", type: "walk", direction: "left"},
       {who: "tech", type: "walk", direction: "left"},
-      {who: "tech", type: "walk", direction: "left"},
-      {who: "tech", type: "walk", direction: "left"},
-      {who: "tech", type: "walk", direction: "down"},
-      {who: "tech", type: "walk", direction: "down"},
       {who: "tech", type: "walk", direction: "down"},
       {type: "textMessage", text: "This is Brock"},
-      {who: "tech", type: "walk", direction: "up"},
-      {who: "tech", type: "walk", direction: "up"},
+      {type: "textMessage", text: "He uses rock type pokemon"},
       {who: "tech", type: "walk", direction: "up"},
       {who: "tech", type: "walk", direction: "right"},
       {who: "tech", type: "walk", direction: "right"},
       {who: "tech", type: "walk", direction: "right"},
-      {who: "tech", type: "walk", direction: "right"},
-      {who: "tech", type: "walk", direction: "right"},
       {who: "tech", type: "walk", direction: "up"},
       {who: "tech", type: "walk", direction: "up"},
       {who: "tech", type: "walk", direction: "up"},
       {who: "tech", type: "walk", direction: "up"},
-      {who: "tech", type: "walk", direction: "up"},
-      {who: "tech", type: "walk", direction: "up"},
-      {who: "tech", type: "walk", direction: "up"},
-      {who: "tech", type: "walk", direction: "up"},
-      {who: "tech", type: "stand", direction: "down", time: 1000},
+      {who: "tech", type: "stand", direction: "down", time: 100},
     ]);
   }
 }

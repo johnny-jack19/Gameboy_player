@@ -54,6 +54,7 @@ html, body {
     height: 100%;
     border-radius: 5px;
     image-rendering: pixelated;
+    background-color: black;
 }
 
 .TextMessage {

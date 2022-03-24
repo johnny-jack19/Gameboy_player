@@ -39,7 +39,13 @@
             <button id="select">SELECT</button>
             <button id="start">START</button>
         </div>
+        <script>
+            window.addEventListener("contextmenu", (e) => {
+                e.preventDefault();
+            }, false);
+        </script>
         <script src="/javascript/utils.js"></script>
+        <script src="/javascript/KeyPressLister.js"></script>
         <script src="/javascript/TextMessage.js"></script>
         <script src="/javascript/pokemon.js"></script>
         <script src="/javascript/DirectionInput.js"></script>

@@ -11,9 +11,13 @@ class GameObject {
             gameObject: this,
             src: config.src
         });
-
         this.behaviorLoop = config.behaviorLoop || [];
         this.behaviorLoopIndex = 0;
+        this.talking = config.talking || [];
+    }
+
+    update() {
+        return;
     }
 
     mount(map) {
@@ -31,21 +35,19 @@ class GameObject {
           return;
         }
     
-        //Setting up our event with relevant info
+        //Setting up event
         let eventConfig = this.behaviorLoop[this.behaviorLoopIndex];
         eventConfig.who = this.id;
-    
-        //Create an event
         const eventHandler = new OverworldEvent({ map, event: eventConfig });
         await eventHandler.init(); 
     
-        //Setting the next event to fire
+        //Setting up next event
         this.behaviorLoopIndex += 1;
         if (this.behaviorLoopIndex === this.behaviorLoop.length) {
           this.behaviorLoopIndex = 0;
         } 
     
-        //Do it again!
+        //Do it again
         this.doBehaviorEvent(map);
     }
 }

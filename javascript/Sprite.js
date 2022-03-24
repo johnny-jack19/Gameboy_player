@@ -23,7 +23,7 @@ class Sprite {
         }
         this.currentAnimation = config.currentAnimation || "idle-down";
         this.currentAnimationFrame = 0;
-        this.animationFrameLimit = config.animationFrameLimit || 4;
+        this.animationFrameLimit = this.gameObject.imageInfo.animationFrameLimit || 8;
         this.animationFrameProgress = this.animationFrameLimit;
     }
 
@@ -54,12 +54,12 @@ class Sprite {
         }
     }
 
-    draw(context) {
+    draw(context, cameraFocus) {
         this.updateAnimationProgress();
         const sx = this.frame || 26;
         const sy = this.gameObject.imageInfo.sy || 34;
-        const x = this.gameObject.x;
-        const y = this.gameObject.y;
+        const x = this.gameObject.x + 56 - cameraFocus.x;
+        const y = this.gameObject.y + 56 - cameraFocus.y;
         this.isLoaded && context.drawImage(this.image, sx, sy, 16, 16, x, y, 16, 16);
     }
 

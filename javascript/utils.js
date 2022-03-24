@@ -3,13 +3,13 @@ const utils = {
         let x = initialX;
         let y = initialY;
         if (direction === "left") {
-            x -= 8;
+            x -= 16;
         } else if (direction === "right") {
-            x += 8;
+            x += 16;
         } else if (direction === "up") {
-            y -= 8;
+            y -= 16;
         } else if (direction === "down") {
-            y += 8;
+            y += 16;
         }
         return {x, y};
     },
@@ -19,7 +19,15 @@ const utils = {
             detail
         });
         document.dispatchEvent(event);
+    },
+
+    oppositeDirection(direction) {
+        const oppDirection = {
+            up: "down",
+            down: "up",
+            left: "right",
+            right: "left"
+        }
+        return oppDirection[direction];
     }
 }
-
-window.addEventListener("contextmenu", e => e.defaultPrevented());
