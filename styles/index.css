@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: beige;
     background-image: url("/images/brick.jpg");
@@ -5,6 +10,12 @@ body {
     image-rendering: pixelated;
     display: flex;
     flex-direction: column;
+}
+
+p {
+    display: block;
+    width: 90%;
+    margin: auto;
 }
 
 h1 {
@@ -17,25 +28,87 @@ h1 {
 .card-container {
     display: flex;
     flex-direction: column;
-    width: 85%;
-    margin: auto;
+    width: 100%;
+    margin: 0;
+}
+
+.sprite {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    transform: scale(6) translateY(7px);
+    image-rendering: pixelated;
+    z-index: 2;
+}
+
+@keyframes pokemon-sprite {
+    from {background-position: -145px -34px;}
+    to {background-position: -179px -34px;}
+}
+
+#pokemon-sprite {
+    background-image: url("/images/overworld.png");
+    animation: pokemon-sprite .5s steps(2) infinite;
+}
+
+@keyframes mario-kirby-sprite {
+    from {background-position: 0px 0px;}
+    to {background-position: -64px 0px;}
+}
+
+#mario-sprite {
+    background-image: url("/images/mario.png");
+    animation: mario-kirby-sprite 1s steps(4) infinite;
+}
+
+@keyframes link-sprite {
+    from {background-position: 0px 0px;}
+    to {background-position: -32px 0px;}
+}
+
+#link-sprite {
+    background-image: url("/images/link.png");
+    animation: link-sprite .5s steps(2) infinite;
+}
+
+#kirby-sprite {
+    background-image: url("/images/kirby.png");
+    animation: mario-kirby-sprite 1s steps(4) infinite;
+}
+
+@keyframes samus-sprite {
+    from {background-position: 0px 0px;}
+    to {background-position: -128px 0px;}
+}
+
+#samus-sprite {
+    width: 32px;
+    height: 32px;
+    background-image: url("/images/samus.png");
+    animation: samus-sprite 1s steps(4) infinite;
+    transform: scale(3) translateY(10px);
 }
 
 .game-card {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 200px;
+    flex-basis: 375px;
     color: white;
     border: 5px solid black;
-    margin: auto;
-    margin: 8px;
+    margin: 0;
     box-shadow: 8px 8px 5px rgb(0, 50, 92);
     text-align: center;
-    width: 100%;
     image-rendering: pixelated;
+    background-position: center;
+    background-size: 100% 100%;
 }
 
 h2 {
     border-radius: 3px;
-    margin-top: 0;
+    margin: 0;
     font-size: 4em;
     text-shadow: 2px 2px gray;
     transform: translateY(-1px);
@@ -53,6 +126,7 @@ h2, p {
 
 .block-button {
     position: relative;
+    cursor: pointer;
     background-color: rgb(233, 183, 18);
     border: 8px ridge rgb(90, 85, 85);
     box-shadow: -5px -5px 2px inset rgb(192, 150, 14);
@@ -72,13 +146,6 @@ h2, p {
     background-color: rgb(211, 165, 14);
 }
 
-.warp-pipe {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    z-index: 2;
-}
-
 .hidden {
     display: none;
 }
@@ -89,14 +156,12 @@ h2, p {
     margin: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .6);
     z-index: 1;
 }
 
 #game-1 {
     background-image: url("/images/new_pokemon_background.jpg");
-    background-position: center;
-    background-size: 100% 100%;
 }
 
 #game-1 h2 {
@@ -105,8 +170,6 @@ h2, p {
 
 #game-2 {
     background-image: url("/images/super_mario_background.jpg");
-    background-position: center;
-    background-size: 100% 100%;
 }
 
 #game-2 h2 {
@@ -115,8 +178,6 @@ h2, p {
 
 #game-3 {
     background-image: url("/images/new_zelda_background.jpg");
-    background-position: center;
-    background-size: 100% 100%;
 }
 
 #game-3 h2 {
@@ -125,8 +186,6 @@ h2, p {
 
 #game-4 {
     background-image: url("/images/kirby_background.jpg");
-    background-position: center;
-    background-size: 100% 100%;
 }
 
 #game-4 h2 {
@@ -135,8 +194,6 @@ h2, p {
 
 #game-5 {
     background-image: url("/images/metroid_background.jpg");
-    background-position: center;
-    background-size: 100% 100%;
 }
 
 #game-5 h2 {
@@ -149,34 +206,38 @@ h2, p {
 }
 
 @media only screen and (min-width: 768px) {
-    .overlay, h2, p, .block-button, .warp-pipe {
+    .overlay, h2, p, .block-button, .sprite {
         z-index: -1;
     }
 
     .card-container {
         flex-direction: row;
         flex-wrap: wrap;
+        width: 92%;
+        margin: auto;
+        justify-content: space-between;
     }
 
     .game-card {
         flex-basis: 40%;
         flex-grow: 1;
+        margin: 20px;
     }
 
-    #game-1:hover .overlay, #game-1:hover h2, #game-1:hover p, #game-1:hover .block-button, #game-1:hover .warp-pipe {
+    #game-1:hover .overlay, #game-1:hover h2, #game-1:hover p, #game-1:hover .block-button, #game-1:hover .sprite {
         z-index: 1;
     }
     
-    #game-2:hover .overlay, #game-2:hover h2, #game-2:hover p, #game-2:hover .block-button {
+    #game-2:hover .overlay, #game-2:hover h2, #game-2:hover p, #game-2:hover .block-button, #game-2:hover .sprite {
         z-index: 1;
     }
-    #game-3:hover .overlay, #game-3:hover h2, #game-3:hover p, #game-3:hover .block-button {
+    #game-3:hover .overlay, #game-3:hover h2, #game-3:hover p, #game-3:hover .block-button, #game-3:hover .sprite {
         z-index: 1;
     }
-    #game-4:hover .overlay, #game-4:hover h2, #game-4:hover p, #game-4:hover .block-button {
+    #game-4:hover .overlay, #game-4:hover h2, #game-4:hover p, #game-4:hover .block-button, #game-4:hover .sprite {
         z-index: 1;
     }
-    #game-5:hover .overlay, #game-5:hover h2, #game-5:hover p, #game-5:hover .block-button {
+    #game-5:hover .overlay, #game-5:hover h2, #game-5:hover p, #game-5:hover .block-button, #game-5:hover .sprite {
         z-index: 1;
     }
 }
@@ -197,7 +258,7 @@ h2, p {
         display: none;
     }
     .card-container {
-        width: 700vw;
+        width: 500vw;
         flex-wrap: nowrap;
         transform: rotate(90);
         margin: 0;
@@ -205,9 +266,10 @@ h2, p {
         justify-content: space-around;
     }
     .game-card {
-        width: 500px;
-        height: 500px;
-        flex-grow: 0;
+        width: 100vw;
+        height: 100vh;
+        flex-grow: 1;
         flex-basis: 500px;
+        margin: 0;
     }
 }

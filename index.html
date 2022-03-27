@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/index.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/index.css">
     <script src="/javascript/index.js"></script>
     <title>Gameboy Player | Home</title>
 </head>
@@ -18,54 +18,139 @@
             <div class="overlay"></div>
             <h2 class="game-title">Pokemon</h2>
             <div class="game-info">
-                <p class="game-text-1 hidden">Hello</p>
-                <p class="game-text-2">World</p>
-                <p class="game-text-3 hidden">And everyone else</p>
+                <p class="game-text-1">
+                    You've finally been granted your Pokémon Trainer's license.<br>
+                    Now, it's time to head out to become the world's greatest Pokémon Trainer.<br>
+                    It's going to take all you've got to collect 150 Pokémon in this enormous world.
+                </p>
+                <p class="game-text-2 hidden">
+                    Catch and train monsters like the shockingly-cute Pikachu.<br>
+                    Face off against Blastoise's torrential water cannons.<br>
+                    Stand strong when facing Pidgeot's stormy Gust.
+                </p>
+                <p class="game-text-3 hidden">
+                    Trade with friends and watch your Pokémon evolve.<br>
+                    Important—no single Pokémon can win at all.<br>
+                    Can you develop the ultimate Pokémon strategy to defeat the eight Gym Leaders?
+                </p>
             </div>
             <div class="button-container">
-                <button class="block-button" onclick="gameInfoToggle('game-1')">?</button>
-                <a href="/pages/gameboy.html"><img class="warp-pipe" src="/images/pipe.png"></a>
+                <a href="/pages/gameboy.html" title="Link to play Pokemon">
+                    <div id="pokemon-sprite" class="sprite"></div>
+                </a>
+                <button class="block-button" onclick="gameInfoToggle('game-1')" title="Game Info">?</button>
             </div>
         </div>
         <div class="game-card" id="game-2">
             <div class="overlay"></div>
             <h2 class="game-title">Mario</h2>
             <div class="game-info">
-                <p class="game-text-1">Hello</p>
-                <p class="game-text-2 hidden">World</p>
-                <p class="game-text-3 hidden">And everyone else</p>
+                <p class="game-text-1">
+                    One day the kingdom of the peaceful mushroom people was invaded by the Koopa, a tribe of turtles famous for their black magic. 
+                    The quiet, peace-loving Mushroom People were turned into mere stones, bricks and even field horse-hair plants, and the Mushroom Kingdom fell into ruin.
+                </p>
+                <p class="game-text-2 hidden">
+                    The only one who can undo the magic spell on the Mushroom People and return them to their normal selves is the Princess Toadstool, 
+                    the daughter of the Mushroom King. 
+                    Unfortunately, she is presently in the hands of the great Koopa turtle king.
+                </p>
+                <p class="game-text-3 hidden">
+                    Mario, the hero of the story (maybe) hears about the Mushroom People's plight and sets out on a quest to free the 
+                    Mushroom Princess from the evil Koopa and restore the fallen kingdom of the Mushroom People. 
+                    You are Mario! It's up to you to save the Mushroom People from the black magic of the Koopa!
+                </p>
             </div>
-            <button class="block-button" onclick="gameInfoToggle('game-2')"">?</button>
+            <div class="button-container">
+                <a href="#game-2">
+                    <div id="mario-sprite" class="sprite" title="Link to play Mario"></div>
+                </a>
+                <button class="block-button" onclick="gameInfoToggle('game-2')" title="Game Info">?</button>
+            </div>
         </div>
         <div class="game-card" id="game-3">
             <div class="overlay"></div>
             <h2 class="game-title">Zelda</h2>
             <div class="game-info">
-                <p class="game-text-1">Hello</p>
-                <p class="game-text-2 hidden">World</p>
-                <p class="game-text-3 hidden">And everyone else</p>
+                <p class="game-text-1">
+                    In the midst of the chaos, in a little kingdom in the land of Hyrule, a legend was being handed down from generation to generation, 
+                    the legend of the “Triforce”: golden triangles possessing mystical powers.
+                </p>
+                <p class="game-text-2 hidden">
+                    One day, an evil army attacked this peaceful little kingdom and stole the Triforce of Power. 
+                    This army was led by Ganon, the powerful Prince of Darkness who sought to plunge the World into fear and darkness under his rule.
+                </p>
+                <p class="game-text-3 hidden">
+                    Fearing his wicked rule, Zelda, the princess of the kingdom, split up the Triforce of Wisdom into 
+                    eight fragments and hid them throughout the realm to save the last remaining Triforce from the clutches of the evil Ganon.
+                </p>
             </div>
-            <button class="block-button" onclick="gameInfoToggle('game-3')">?</button>
+            <div class="button-container">
+                <a href="#game-3">
+                    <div id="link-sprite" class="sprite" title="Link to play Zelda"></div>
+                </a>
+                <button class="block-button" onclick="gameInfoToggle('game-3')" title="Game Info">?</button>
+            </div>
         </div>
         <div class="game-card" id="game-4">
             <div class="overlay"></div>
             <h2 class="game-title">Kirby</h2>
             <div class="game-info">
-                <p class="game-text-1">Hello</p>
-                <p class="game-text-2 hidden">World</p>
-                <p class="game-text-3 hidden">And everyone else</p>
+                <p class="game-text-1">
+                    On a tiny star somewhere far, far away from earth, there is a very special place known as Dream Land. 
+                    The Dream Landers are very happy people who use their magical Sparkling Stars to play and work among the heavens. 
+                </p>
+                <p class="game-text-2 hidden">
+                    That is until one dark night when the gluttonous King Dedede and his rotten band of thieves 
+                    swooped down from neighboring Mt. Dedede for a midnight snack in Dream Land.
+                </p>
+                <p class="game-text-3 hidden">
+                    Not only did they steal all their food, but they stole the Dream Lander's treasured Sparkling Stars as well. 
+                    Because the Dream Landers didn't have the Sparkling Stars to gather food anymore, they began to get very hungry. 
+                </p>
             </div>
-            <button class="block-button" onclick="gameInfoToggle('game-4')">?</button>
+            <div class="button-container">
+                <a href="#game-4">
+                    <div id="kirby-sprite" class="sprite" title="Link to play Kirby"></div>
+                </a>
+                <button class="block-button" onclick="gameInfoToggle('game-4')" title="Game Info">?</button>
+            </div>
         </div>
         <div class="game-card" id="game-5">
             <div class="overlay"></div>
             <h2 class="game-title">Metroid</h2>
             <div class="game-info">
-                <p class="game-text-1">Hello</p>
-                <p class="game-text-2 hidden">World</p>
-                <p class="game-text-3 hidden">And everyone else</p>
+                <p class="game-text-1">
+                    In the year 2000 of the history of the cosmos, representatives from the many different 
+                    planets in the galaxy established a congress called the Galactic Federation, and an age 
+                    of prosperity began. A successful exchange of cultures and civilization resulted, and 
+                    thousands of interstellar spaceships ferried back and forth between planets. But space 
+                    pirates also appeared to attack the spaceships.
+                </p>
+                <p class="game-text-2 hidden">
+                    The Federation Bureau created the Galactic Federation Police, but the pirates' attacks 
+                    were powerful and it was not easy to catch them in the vastness of space. The Federation 
+                    Bureau and the Federation Police called together warriors known for their great courage 
+                    and sent them to do battle with the pirates. These great warriors were called 
+                    "space hunters." They received large rewards when they captured pirates, and made 
+                    their living as space bounty hunters.
+                </p>
+                <p class="game-text-3 hidden">
+                    It is now year 20X5 of the history of the cosmos, and something terrible has happened. 
+                    Space pirates have attacked a deep-space research spaceship and seized a capsule 
+                    containing an unknown life-form that had just been discovered on Planet SR388. This 
+                    life-form is in a state of suspended animation, but can be reactivated and will 
+                    multiply when exposed to beta rays for 24 hours. It is suspected that the entire 
+                    civilization of Planet SR388 was destroyed by some unknown person or thing, and there 
+                    is a strong possibility that the life-form just discovered was the cause of the 
+                    planet's destruction. To carelessly let it multiply would be extremely dangerous. 
+                </p>
             </div>
-            <button class="block-button" onclick="gameInfoToggle('game-5')">?</button>
+            <div class="button-container">
+                <a href="#game-5">
+                    <div id="samus-sprite" class="sprite" title="Link to play Metroid"></div>
+                </a>
+                <button class="block-button" onclick="gameInfoToggle('game-5')" title="Game Info">?</button>
+            </div>
         </div>
     </div>
     </body>
