@@ -1,6 +1,7 @@
 # Gameboy_player
 The index page is a landing page that branches out into different games.
 The games are a work in progress with Pokemon being the only one semi-working.
+The ? blocks display game info and the running sprites are links to the game (Pokemon is the only one currently working).
 
 The media queries are at 768px and 1200px.
 
