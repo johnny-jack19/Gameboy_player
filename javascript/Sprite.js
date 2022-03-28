@@ -5,7 +5,7 @@ class Sprite {
 
         //Set image
         this.image = new Image();
-        this.image.src = config.src || "/images/overworld.png";
+        this.image.src = config.src || "../images/overworld.png";
         this.image.onload = () => {
             this.isLoaded = true;
         }

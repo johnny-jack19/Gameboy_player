@@ -129,7 +129,7 @@ class OverworldMap {
 
 window.OverworldMaps = {
     Brock: {
-        mapSrc: "/images/elite_four.png",
+        mapSrc: "../images/elite_four.png",
         door: true,
         cutsceneSpaces: {
             "48, 0": [
@@ -217,7 +217,7 @@ window.OverworldMaps = {
     },
     
     Misty: {
-        mapSrc: "/images/elite_four.png",
+        mapSrc: "../images/elite_four.png",
         gameObjects: {
             misty: new Person({
                 imageInfo: {sy: 306},
@@ -259,7 +259,7 @@ window.OverworldMaps = {
     },
 
     Surge: {
-        mapSrc: "/images/elite_four.png",
+        mapSrc: "../images/elite_four.png",
         gameObjects: {
             surge: new Person({
                 imageInfo: {sy: 714},
@@ -301,7 +301,7 @@ window.OverworldMaps = {
     },
 
     Erika: {
-        mapSrc: "/images/elite_four.png",
+        mapSrc: "../images/elite_four.png",
         gameObjects: {
             erika: new Person({
                 imageInfo: {sy: 782},
@@ -343,7 +343,7 @@ window.OverworldMaps = {
     },
 
     Koga: {
-        mapSrc: "/images/elite_four.png",
+        mapSrc: "../images/elite_four.png",
         gameObjects: {
             koga: new Person({
                 imageInfo: {sy: 833},
@@ -385,7 +385,7 @@ window.OverworldMaps = {
     },
 
     Sabrina: {
-        mapSrc: "/images/elite_four.png",
+        mapSrc: "../images/elite_four.png",
         gameObjects: {
             sabrina: new Person({
                 imageInfo: {sy: 153},
@@ -427,7 +427,7 @@ window.OverworldMaps = {
     },
 
     Blaine: {
-        mapSrc: "/images/elite_four.png",
+        mapSrc: "../images/elite_four.png",
         gameObjects: {
             blaine: new Person({
                 imageInfo: {sy: 425},
@@ -469,7 +469,7 @@ window.OverworldMaps = {
     },
 
     Giovanni: {
-        mapSrc: "/images/elite_four.png",
+        mapSrc: "../images/elite_four.png",
         gameObjects: {
             giovanni: new Person({
                 imageInfo: {sy: 799},

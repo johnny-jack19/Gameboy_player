@@ -5,7 +5,7 @@ html, body {
 
 body {
     background-color: beige;
-    background-image: url("/images/brick.jpg");
+    background-image: url("../images/brick.jpg");
     background-size: 10%;
     image-rendering: pixelated;
     display: flex;
@@ -49,7 +49,7 @@ h1 {
 }
 
 #pokemon-sprite {
-    background-image: url("/images/overworld.png");
+    background-image: url("../images/overworld.png");
     animation: pokemon-sprite .5s steps(2) infinite;
 }
 
@@ -59,7 +59,7 @@ h1 {
 }
 
 #mario-sprite {
-    background-image: url("/images/mario.png");
+    background-image: url("../images/mario.png");
     animation: mario-kirby-sprite 1s steps(4) infinite;
 }
 
@@ -69,12 +69,12 @@ h1 {
 }
 
 #link-sprite {
-    background-image: url("/images/link.png");
+    background-image: url("../images/link.png");
     animation: link-sprite .5s steps(2) infinite;
 }
 
 #kirby-sprite {
-    background-image: url("/images/kirby.png");
+    background-image: url("../images/kirby.png");
     animation: mario-kirby-sprite 1s steps(4) infinite;
 }
 
@@ -86,7 +86,7 @@ h1 {
 #samus-sprite {
     width: 32px;
     height: 32px;
-    background-image: url("/images/samus.png");
+    background-image: url("../images/samus.png");
     animation: samus-sprite 1s steps(4) infinite;
     transform: scale(3) translateY(10px);
 }
@@ -163,7 +163,7 @@ h2, p {
 }
 
 #game-1 {
-    background-image: url("/images/new_pokemon_background.jpg");
+    background-image: url("../images/new_pokemon_background.jpg");
 }
 
 #game-1 h2 {
@@ -171,7 +171,7 @@ h2, p {
 }
 
 #game-2 {
-    background-image: url("/images/super_mario_background.jpg");
+    background-image: url("../images/super_mario_background.jpg");
 }
 
 #game-2 h2 {
@@ -179,7 +179,7 @@ h2, p {
 }
 
 #game-3 {
-    background-image: url("/images/new_zelda_background.jpg");
+    background-image: url("../images/new_zelda_background.jpg");
 }
 
 #game-3 h2 {
@@ -187,7 +187,7 @@ h2, p {
 }
 
 #game-4 {
-    background-image: url("/images/kirby_background.jpg");
+    background-image: url("../images/kirby_background.jpg");
 }
 
 #game-4 h2 {
@@ -195,7 +195,7 @@ h2, p {
 }
 
 #game-5 {
-    background-image: url("/images/metroid_background.jpg");
+    background-image: url("../images/metroid_background.jpg");
 }
 
 #game-5 h2 {
