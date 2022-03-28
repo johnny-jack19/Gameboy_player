@@ -23,6 +23,8 @@ h1 {
     align-self: center;
     text-shadow: 2px 2px red;
     font-size: 4em;
+    background-color: darkred;
+    border-radius: 45%;
 }
 
 .card-container {
@@ -203,6 +205,7 @@ h2, p {
 .hero {
     width: 100%;
     image-rendering: pixelated;
+    margin-bottom: 25px;
 }
 
 @media only screen and (min-width: 768px) {

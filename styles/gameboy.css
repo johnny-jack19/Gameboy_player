@@ -11,7 +11,7 @@ html, body {
 .gameboy {
     background-color: #c9cecf;
     display: grid;
-    grid-template-areas: "top top    top    top    top"
+    grid-template-areas: "... ...    ...    ...    ..."
                          "... screen screen screen ..."
                          "... logo   logo   ...    ..."
                          "... d-pad  ...    a-b    ..."
@@ -23,10 +23,6 @@ html, body {
     border-radius: 25px 25px 75px 25px;
     height: 95%;
     margin: 1%;
-}
-
-#top {
-    grid-area: top;
 }
 
 #screen {
@@ -126,17 +122,22 @@ html, body {
 
 #select-start {
     grid-area: s-s;
+    display: flex;
+    justify-content: space-between;
 }
 
 #start, #select {
     border-radius: 8px;
     transform: rotate(-25deg);
+    height: 2em;
+    width: 6em;
+    flex-grow: 0;
 }
 
 
 .arrow {
     background-color: black;
-    height: 125%;
+    height: 100%;
 }
 
 .mid-d {
@@ -145,16 +146,21 @@ html, body {
 
 @media only screen and (min-width: 600px) {
     .gameboy {
-        grid-template-areas: "... ...   ...    ... ..."
-                             "... ...   screen s-s ..."
-                             "... d-pad screen a-b ..."
-                             "... ...   screen a-b ..."
-                             "... ...   logo   ... ..."
-                             "... ...   hp     ... spk";
-        grid-template-columns: 5% 1fr 50% 1fr 5%;
+        grid-template-areas: "... ...   ... ...    ... ... ..."
+                             "... ...   ... screen ... s-s ..."
+                             "... d-pad ... screen ... a-b ..."
+                             "... ...   ... screen ... a-b ..."
+                             "... ...   ... logo   ... ... ..."
+                             "... ...   ... ...    ... ... ...";
+        grid-template-columns: 5% 1fr 5% 50% 5% 1fr 5%;
         grid-template-rows: 5% 1fr 1fr 1fr 5% 5%;
     }
-    #top {
-        display: none;
+    
+    #start, #select {
+        transform: rotate(0deg);
+    }
+
+    #b {
+        align-self: end;
     }
 }
